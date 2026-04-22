@@ -1,0 +1,2708 @@
+<!doctype html>
+<html lang="nl">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Sem Elite Performance — Elite Off-Season Camp</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+  <style>
+    :root{
+      --bg:#05070a;
+      --bg-soft:#0a0f15;
+      --section:#081019;
+      --card:#0d141c;
+      --card-2:#101925;
+
+      --text:#f7f9fb;
+      --muted:rgba(247,249,251,.72);
+      --muted-2:rgba(247,249,251,.52);
+
+      --accent:#39e58c;
+      --accent-dark:#24bd70;
+      --accent-soft:rgba(57,229,140,.10);
+      --accent-stroke:rgba(57,229,140,.30);
+
+      --stroke:rgba(255,255,255,.08);
+      --stroke-strong:rgba(255,255,255,.12);
+
+      --danger-soft:rgba(255,101,101,.10);
+      --danger-stroke:rgba(255,101,101,.26);
+
+      --shadow-sm:0 14px 30px rgba(0,0,0,.22);
+      --shadow-md:0 24px 60px rgba(0,0,0,.28);
+      --shadow-lg:0 36px 90px rgba(0,0,0,.34);
+
+      --radius-xl:32px;
+      --radius-lg:24px;
+      --radius-md:18px;
+      --radius-sm:14px;
+
+      --max:1140px;
+      --hero-cream:#f4ecdf;
+    }
+
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    html,body{height:100%}
+
+    body{
+      margin:0;
+      font-family:Inter, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
+      color:var(--text);
+      background:
+        radial-gradient(900px 480px at 50% -8%, rgba(57,229,140,.05), transparent 58%),
+        linear-gradient(180deg, #05070a 0%, #070b10 100%);
+      overflow-x:hidden;
+      -webkit-font-smoothing:antialiased;
+      text-rendering:optimizeLegibility;
+    }
+
+    a{color:inherit;text-decoration:none}
+    img{max-width:100%;display:block}
+    button,input,select,textarea{font:inherit}
+
+    .container{
+      width:min(var(--max), calc(100% - 48px));
+      margin-inline:auto;
+    }
+
+    .section{padding:110px 0}
+    .section.tight{padding:80px 0}
+    .center{text-align:center}
+    .muted2{color:var(--muted-2)}
+
+    .section-head{
+      position:relative;
+      z-index:2;
+    }
+
+    .title-wrap{
+      max-width:900px;
+      margin:0 auto 34px;
+      text-align:center;
+      position:relative;
+      z-index:2;
+    }
+
+    .section-title{
+      margin:0;
+      font-size:clamp(38px, 5vw, 60px);
+      line-height:1;
+      letter-spacing:-.045em;
+      font-weight:900;
+      color:var(--text);
+    }
+
+    .title-wrap .eyebrow + .section-title{
+      margin-top:16px;
+    }
+
+    .section-sub{
+      margin:18px auto 0;
+      max-width:780px;
+      font-size:18px;
+      line-height:1.72;
+      color:var(--muted);
+    }
+
+    .eyebrow{
+      display:inline-flex;
+      align-items:center;
+      gap:10px;
+      padding:8px 14px;
+      border-radius:999px;
+      border:1px solid var(--stroke);
+      background:rgba(255,255,255,.03);
+      color:rgba(247,249,251,.82);
+      font-size:11px;
+      font-weight:800;
+      letter-spacing:.16em;
+      text-transform:uppercase;
+      box-shadow:inset 0 1px 0 rgba(255,255,255,.02);
+    }
+
+    .eyebrow::before{
+      content:"";
+      width:8px;
+      height:8px;
+      border-radius:999px;
+      background:var(--accent);
+      box-shadow:0 0 14px rgba(57,229,140,.38);
+      flex:0 0 auto;
+    }
+
+    .site-header{
+      position:fixed;
+      top:0;
+      left:0;
+      width:100%;
+      z-index:1000;
+      background:rgba(5,7,10,.48);
+      border-bottom:1px solid rgba(255,255,255,.05);
+      backdrop-filter:blur(14px);
+      -webkit-backdrop-filter:blur(14px);
+    }
+
+    .site-header-inner{
+      width:min(1280px, calc(100% - 56px));
+      margin:0 auto;
+      min-height:92px;
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:24px;
+    }
+
+    .header-left{
+      display:flex;
+      align-items:center;
+      gap:16px;
+      min-width:0;
+    }
+
+    .header-logo{
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      flex-shrink:0;
+    }
+
+    .header-logo img{
+      height:92px;
+      width:auto;
+      object-fit:contain;
+      filter:drop-shadow(0 10px 24px rgba(0,0,0,.22));
+    }
+
+    .btn,
+    .btn-light,
+    .header-cta{
+      appearance:none;
+      border:none;
+      cursor:pointer;
+      transition:transform .16s ease, box-shadow .16s ease, background .16s ease, border-color .16s ease, opacity .16s ease;
+      font-weight:800;
+    }
+
+    .btn,
+    .header-cta{
+      background:linear-gradient(180deg, var(--accent) 0%, var(--accent-dark) 100%);
+      color:#061009;
+      border:1px solid var(--accent-stroke);
+      box-shadow:
+        0 12px 28px rgba(57,229,140,.12),
+        0 14px 28px rgba(0,0,0,.24);
+    }
+
+    .btn-light{
+      background:rgba(255,255,255,.03);
+      color:var(--text);
+      border:1px solid var(--stroke);
+      box-shadow:0 10px 22px rgba(0,0,0,.18);
+    }
+
+    .header-cta{
+      padding:14px 22px;
+      border-radius:14px;
+      font-size:15px;
+      white-space:nowrap;
+      flex-shrink:0;
+    }
+
+    .btn{
+      padding:17px 28px;
+      border-radius:16px;
+      font-size:15px;
+      min-width:220px;
+    }
+
+    .btn-light{
+      padding:17px 28px;
+      border-radius:16px;
+      font-size:15px;
+      min-width:220px;
+    }
+
+    .btn:hover,
+    .btn-light:hover,
+    .header-cta:hover{
+      transform:translateY(-1px);
+    }
+
+    .btn:hover,
+    .header-cta:hover{
+      box-shadow:
+        0 16px 34px rgba(57,229,140,.13),
+        0 18px 34px rgba(0,0,0,.28);
+    }
+
+    .btn-light:hover{
+      border-color:rgba(255,255,255,.14);
+      background:rgba(255,255,255,.05);
+    }
+
+    .btn:active,
+    .btn-light:active,
+    .header-cta:active{
+      transform:translateY(0);
+      opacity:.96;
+    }
+
+    .hero{
+      position:relative;
+      min-height:100vh;
+      display:flex;
+      align-items:center;
+      padding:140px 0 90px;
+      overflow:hidden;
+      background:#05080d;
+      border-bottom:1px solid rgba(255,255,255,.05);
+    }
+
+    .hero-video{
+      position:absolute;
+      inset:0;
+      width:100%;
+      height:100%;
+      object-fit:cover;
+      z-index:0;
+      filter:brightness(1.16) contrast(1.04) saturate(1.02);
+      transform:scale(1.01);
+    }
+
+    .hero::before{
+      content:"";
+      position:absolute;
+      inset:0;
+      z-index:1;
+      background:
+        linear-gradient(90deg, rgba(0,0,0,.58) 0%, rgba(0,0,0,.28) 42%, transparent 82%),
+        linear-gradient(180deg, rgba(0,0,0,.10), rgba(0,0,0,.42));
+      pointer-events:none;
+    }
+
+    .hero-inner{
+      position:relative;
+      z-index:2;
+      max-width:720px;
+      text-align:left;
+      display:flex;
+      flex-direction:column;
+      align-items:flex-start;
+    }
+
+    .hero-title{
+      margin:0 0 24px;
+      font-size:clamp(58px, 9vw, 128px);
+      font-weight:900;
+      line-height:.84;
+      letter-spacing:-.055em;
+      text-transform:uppercase;
+      color:var(--hero-cream);
+      text-shadow:0 8px 28px rgba(0,0,0,.22);
+    }
+
+    .hero-actions{
+      display:flex;
+      gap:14px;
+      flex-wrap:wrap;
+      align-items:center;
+      justify-content:flex-start;
+    }
+
+    .hero-badge{
+      display:inline-flex;
+      align-items:center;
+      gap:12px;
+      margin-top:22px;
+      padding:12px 18px;
+      border-radius:999px;
+      border:1px solid rgba(255,255,255,.10);
+      background:rgba(255,255,255,.05);
+      color:#fff;
+      font-size:12px;
+      font-weight:800;
+      letter-spacing:.16em;
+      text-transform:uppercase;
+      box-shadow:0 10px 26px rgba(0,0,0,.24);
+      backdrop-filter:blur(10px);
+      -webkit-backdrop-filter:blur(10px);
+    }
+
+    .hero-badge::before{
+      content:"";
+      width:10px;
+      height:10px;
+      border-radius:999px;
+      background:var(--accent);
+      box-shadow:0 0 18px rgba(57,229,140,.55);
+      flex:0 0 auto;
+    }
+
+    .camp-info-section{
+      padding:44px 0 24px;
+      background:var(--section);
+      border-bottom:1px solid rgba(255,255,255,.05);
+    }
+
+    .hero-feature-grid{
+      display:grid;
+      grid-template-columns:repeat(4, minmax(190px, 240px));
+      justify-content:center;
+      gap:14px;
+      max-width:1040px;
+      margin:0 auto;
+    }
+
+    .hero-feature-box{
+      min-height:118px;
+      padding:18px 16px;
+      border-radius:20px;
+      border:1px solid var(--stroke);
+      background:linear-gradient(180deg, rgba(255,255,255,.03), rgba(255,255,255,.015));
+      box-shadow:var(--shadow-sm);
+      display:flex;
+      flex-direction:column;
+      align-items:center;
+      justify-content:center;
+      text-align:center;
+      gap:8px;
+      position:relative;
+      overflow:hidden;
+      backdrop-filter:blur(10px);
+      -webkit-backdrop-filter:blur(10px);
+    }
+
+    .hero-feature-icon{
+      width:38px;
+      height:38px;
+      border-radius:12px;
+      display:grid;
+      place-items:center;
+      background:var(--accent-soft);
+      border:1px solid var(--accent-stroke);
+      color:var(--accent);
+      font-size:16px;
+    }
+
+    .hero-feature-kicker{
+      font-size:9px;
+      font-weight:800;
+      letter-spacing:.15em;
+      text-transform:uppercase;
+      color:rgba(247,249,251,.44);
+    }
+
+    .hero-feature-text{
+      font-size:13px;
+      font-weight:800;
+      line-height:1.24;
+      color:rgba(247,249,251,.92);
+      max-width:220px;
+      margin:0 auto;
+      letter-spacing:-.01em;
+    }
+
+    .panel{
+      background:linear-gradient(180deg, rgba(255,255,255,.03), rgba(255,255,255,.015));
+      border:1px solid var(--stroke);
+      border-radius:var(--radius-xl);
+      box-shadow:var(--shadow-lg);
+      position:relative;
+      overflow:hidden;
+    }
+
+    #coach{
+      padding-top:44px;
+      padding-bottom:88px;
+      background:var(--section);
+    }
+
+    .club-strip{
+      padding:34px 28px 32px;
+    }
+
+    .club-logos{
+      display:grid;
+      grid-template-columns:repeat(6, 1fr);
+      gap:22px;
+      align-items:start;
+    }
+
+    .club-item{
+      display:flex;
+      flex-direction:column;
+      align-items:center;
+      gap:12px;
+      min-width:0;
+    }
+
+    .club-logo{
+      width:148px;
+      height:148px;
+      border-radius:22px;
+      border:1px solid var(--stroke);
+      background:rgba(255,255,255,.02);
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      padding:14px;
+      overflow:hidden;
+      box-shadow:var(--shadow-sm);
+    }
+
+    .club-logo img{
+      width:108px;
+      height:108px;
+      object-fit:contain;
+      margin:auto;
+      filter:drop-shadow(0 6px 14px rgba(0,0,0,.30));
+    }
+
+    .logo-denbosch{transform:scale(1.15)}
+    .logo-vitesse{transform:scale(1.15)}
+
+    .club-name{
+      font-size:14px;
+      line-height:1.3;
+      color:rgba(247,249,251,.84);
+      font-weight:700;
+      text-align:center;
+      min-height:36px;
+      display:flex;
+      align-items:flex-start;
+      justify-content:center;
+    }
+
+    .audience-section{
+      padding:110px 0;
+      background:var(--section);
+      border-top:1px solid rgba(255,255,255,.05);
+      border-bottom:1px solid rgba(255,255,255,.05);
+    }
+
+    .audience-banner{
+      position:relative;
+      min-height:620px;
+      border-radius:30px;
+      overflow:hidden;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      text-align:center;
+      padding:80px 24px;
+      background:url("assets/seth benen horde.jpeg") center center / cover no-repeat;
+      box-shadow:var(--shadow-lg);
+      isolation:isolate;
+    }
+
+    .audience-banner::before{
+      content:"";
+      position:absolute;
+      inset:0;
+      z-index:0;
+      background:linear-gradient(
+        to bottom,
+        rgba(255,255,255,.05) 0%,
+        rgba(255,255,255,.02) 14%,
+        rgba(0,0,0,.08) 34%,
+        rgba(0,0,0,.24) 58%,
+        rgba(0,0,0,.56) 80%,
+        rgba(0,0,0,.84) 100%
+      );
+    }
+
+    .audience-content{
+      position:relative;
+      z-index:1;
+      max-width:100%;
+      color:#fff;
+    }
+
+    .audience-badge{
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
+      gap:10px;
+      padding:10px 18px;
+      border-radius:999px;
+      border:1px solid rgba(255,255,255,.10);
+      background:rgba(255,255,255,.05);
+      backdrop-filter:blur(10px);
+      -webkit-backdrop-filter:blur(10px);
+      font-size:12px;
+      font-weight:800;
+      letter-spacing:.16em;
+      text-transform:uppercase;
+      color:rgba(247,249,251,.92);
+      box-shadow:0 10px 24px rgba(0,0,0,.24);
+    }
+
+    .audience-badge::before{
+      content:"";
+      width:8px;
+      height:8px;
+      border-radius:999px;
+      background:var(--accent);
+      box-shadow:0 0 14px rgba(57,229,140,.45);
+      flex:0 0 auto;
+    }
+
+    .audience-title{
+      color:#f7f7f7;
+      text-shadow:0 10px 30px rgba(0,0,0,.34);
+    }
+
+    .intro-text{
+      margin:22px auto 0;
+      max-width:860px;
+      font-size:clamp(18px, 2vw, 24px);
+      line-height:1.6;
+      color:rgba(255,255,255,.84);
+    }
+
+    .audience-points{
+      margin-top:30px;
+      display:grid;
+      grid-template-columns:repeat(2, minmax(240px, 1fr));
+      gap:12px 14px;
+      justify-content:center;
+      max-width:900px;
+      margin-left:auto;
+      margin-right:auto;
+    }
+
+    .audience-points span{
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      min-height:52px;
+      padding:12px 18px;
+      border-radius:999px;
+      background:rgba(255,255,255,.05);
+      border:1px solid rgba(255,255,255,.12);
+      color:rgba(255,255,255,.84);
+      font-size:14px;
+      font-weight:600;
+      text-align:center;
+      backdrop-filter:blur(8px);
+      -webkit-backdrop-filter:blur(8px);
+      transition:transform .2s ease, background-color .2s ease, border-color .2s ease;
+    }
+
+    .audience-points span:hover{
+      transform:translateY(-2px);
+      background:rgba(255,255,255,.07);
+      border-color:rgba(255,255,255,.18);
+    }
+
+    .statement{
+      padding:110px 0;
+      border-top:1px solid rgba(255,255,255,.05);
+      border-bottom:1px solid rgba(255,255,255,.05);
+      background:var(--section);
+    }
+
+    .statement .section-head{
+      margin-bottom:24px;
+    }
+
+    .xlist{
+      margin:28px auto 0;
+      display:grid;
+      gap:14px;
+      justify-content:center;
+      max-width:760px;
+      font-size:18px;
+    }
+
+    .xrow{
+      display:flex;
+      align-items:center;
+      gap:12px;
+      justify-content:center;
+      color:rgba(255,101,101,.92);
+      font-weight:700;
+    }
+
+    .xmark{
+      width:22px;
+      height:22px;
+      display:grid;
+      place-items:center;
+      border-radius:999px;
+      border:1px solid var(--danger-stroke);
+      background:var(--danger-soft);
+    }
+
+    .xmark svg{width:12px;height:12px}
+
+    #focus{
+      background:var(--section);
+    }
+
+    .focus{
+      margin-top:48px;
+      display:grid;
+      grid-template-columns:repeat(2, minmax(0, 1fr));
+      gap:24px;
+      max-width:1040px;
+      margin-left:auto;
+      margin-right:auto;
+    }
+
+    .focus-card{
+      position:relative;
+      min-height:420px;
+      border-radius:28px;
+      overflow:hidden;
+      border:1px solid rgba(255,255,255,.10);
+      background:#0b1016;
+      box-shadow:0 22px 56px rgba(0,0,0,.30);
+      transition:transform .32s ease, box-shadow .32s ease, border-color .32s ease;
+      isolation:isolate;
+    }
+
+    .focus-card::before{
+      content:"";
+      position:absolute;
+      inset:0;
+      z-index:1;
+      pointer-events:none;
+      background:linear-gradient(
+        to bottom,
+        rgba(255,255,255,.14) 0%,
+        rgba(255,255,255,.06) 14%,
+        rgba(255,255,255,.02) 26%,
+        rgba(0,0,0,.06) 40%,
+        rgba(0,0,0,.24) 58%,
+        rgba(0,0,0,.58) 80%,
+        rgba(0,0,0,.88) 100%
+      );
+    }
+
+    .focus-card::after{
+      content:"";
+      position:absolute;
+      inset:0;
+      background:radial-gradient(520px 180px at 50% 100%, rgba(57,229,140,.12), transparent 58%);
+      z-index:1;
+      pointer-events:none;
+    }
+
+    .focus-card:hover{
+      transform:translateY(-6px);
+      border-color:rgba(57,229,140,.22);
+      box-shadow:0 30px 74px rgba(0,0,0,.36);
+    }
+
+    .focus-card img{
+      position:absolute;
+      inset:0;
+      width:100%;
+      height:100%;
+      object-fit:cover;
+      display:block;
+      transition:transform .8s ease, filter .4s ease;
+      filter:saturate(.98) contrast(1.03) brightness(.94);
+    }
+
+    .focus-card:hover img{
+      transform:scale(1.04);
+      filter:saturate(1.02) contrast(1.05) brightness(.90);
+    }
+
+    .focus-card-content{
+      position:absolute;
+      left:0;
+      right:0;
+      bottom:0;
+      z-index:2;
+      padding:26px 24px 24px;
+      text-align:left;
+    }
+
+    .focus-card-title{
+      margin:0;
+      font-size:clamp(24px, 3vw, 34px);
+      font-weight:900;
+      color:#ffffff;
+      line-height:1.02;
+      letter-spacing:-.035em;
+      text-transform:uppercase;
+      text-shadow:0 10px 26px rgba(0,0,0,.30);
+      max-width:320px;
+    }
+
+    .focus-card-line{
+      width:68px;
+      height:1px;
+      margin:16px 0 0;
+      background:linear-gradient(90deg, rgba(57,229,140,.95), rgba(57,229,140,0));
+      box-shadow:0 0 14px rgba(57,229,140,.18);
+    }
+
+    #pakketten{
+      background:var(--section);
+    }
+
+    .pricing{
+      margin-top:44px;
+      display:grid;
+      grid-template-columns:repeat(3, 1fr);
+      gap:22px;
+      align-items:stretch;
+    }
+
+    .price-card{
+      background:linear-gradient(180deg, rgba(255,255,255,.03), rgba(255,255,255,.015));
+      border:1px solid rgba(255,255,255,.08);
+      border-radius:26px;
+      box-shadow:var(--shadow-md);
+      padding:30px 26px 24px;
+      position:relative;
+      overflow:hidden;
+      min-height:560px;
+      transition:transform .18s ease, border-color .18s ease, box-shadow .18s ease;
+      display:flex;
+      flex-direction:column;
+    }
+
+    .price-card::before{
+      content:"";
+      position:absolute;
+      inset:0;
+      background:linear-gradient(180deg, rgba(255,255,255,.015), transparent);
+      pointer-events:none;
+    }
+
+    .price-card:hover{
+      transform:translateY(-4px);
+      box-shadow:0 30px 76px rgba(0,0,0,.36);
+    }
+
+    .price-card > *{position:relative}
+
+    .price-card.popular{
+      border-color:var(--accent-stroke);
+      box-shadow:
+        0 30px 80px rgba(0,0,0,.38),
+        0 0 0 1px rgba(57,229,140,.07) inset;
+    }
+
+    .price-card-body{
+      display:flex;
+      flex-direction:column;
+      flex:1;
+      height:100%;
+    }
+
+    .badge-wrapper{
+      text-align:center;
+      margin-bottom:16px;
+    }
+
+    .badge{
+      display:inline-block;
+      background:linear-gradient(180deg, var(--accent) 0%, var(--accent-dark) 100%);
+      color:#07110b;
+      font-weight:900;
+      font-size:12px;
+      letter-spacing:.06em;
+      padding:8px 14px;
+      border-radius:999px;
+      box-shadow:
+        0 10px 24px rgba(57,229,140,.16),
+        0 10px 24px rgba(0,0,0,.24);
+    }
+
+    .plan-title{
+      font-size:12px;
+      letter-spacing:.16em;
+      text-transform:uppercase;
+      color:rgba(247,249,251,.60);
+      margin-bottom:12px;
+      font-weight:800;
+      text-align:center;
+    }
+
+    .price{
+      font-size:54px;
+      letter-spacing:-.05em;
+      margin:14px 0 10px;
+      font-weight:900;
+      text-align:center;
+      color:#ffffff;
+    }
+
+    .price-sub{
+      color:rgba(247,249,251,.66);
+      margin:0 0 22px;
+      font-size:15px;
+      line-height:1.55;
+      text-align:center;
+      min-height:48px;
+    }
+
+    .list{
+      margin:16px 0 0;
+      padding:0;
+      list-style:none;
+      display:grid;
+      gap:14px;
+    }
+
+    .li{
+      display:flex;
+      gap:12px;
+      align-items:flex-start;
+      text-align:left;
+      color:rgba(247,249,251,.84);
+      font-size:15px;
+      line-height:1.5;
+    }
+
+    .check{
+      margin-top:2px;
+      width:20px;
+      height:20px;
+      border-radius:999px;
+      border:1px solid var(--accent-stroke);
+      background:var(--accent-soft);
+      display:grid;
+      place-items:center;
+      flex:0 0 auto;
+    }
+
+    .check svg{
+      width:12px;
+      height:12px;
+      color:var(--accent);
+    }
+
+    .price-card-cta{
+      margin-top:auto;
+      padding-top:32px;
+    }
+
+    .price-card .btn{
+      width:100%;
+      padding:16px 18px;
+      border-radius:16px;
+      min-width:0;
+      margin-top:0;
+      font-size:15px;
+    }
+
+    .sem-premium-story-section{
+      padding:124px 24px;
+      background:var(--section);
+      color:var(--text);
+      overflow:hidden;
+      border-top:1px solid rgba(255,255,255,.05);
+      border-bottom:1px solid rgba(255,255,255,.05);
+    }
+
+    .sem-premium-story-wrap{max-width:1320px;margin:0 auto}
+    .sem-premium-story-heading{margin:0 auto 58px;text-align:center}
+
+    .sem-premium-intro{
+      max-width:740px;
+      margin:22px auto 0;
+      font-size:17px;
+      line-height:1.8;
+      color:rgba(247,249,251,.68);
+    }
+
+    .sem-premium-story-grid{
+      display:grid;
+      grid-template-columns:minmax(320px, 560px) 1fr;
+      gap:30px;
+      align-items:start;
+    }
+
+    .sem-premium-image-card{
+      position:sticky;
+      top:118px;
+      border-radius:30px;
+      overflow:hidden;
+      background:linear-gradient(180deg, rgba(255,255,255,.05) 0%, rgba(255,255,255,.02) 100%);
+      border:1px solid rgba(255,255,255,.08);
+      box-shadow:0 22px 62px rgba(0,0,0,.30);
+      aspect-ratio:3 / 4.6;
+    }
+
+    .sem-premium-image{
+      width:100%;
+      height:100%;
+      display:block;
+      object-fit:cover;
+      aspect-ratio:3 / 4.6;
+      filter:saturate(.95) contrast(1.02);
+    }
+
+    .elite-accordion{
+      display:grid;
+      gap:14px;
+    }
+
+    .elite-accordion-item{
+      overflow:hidden;
+      border-radius:24px;
+      background:linear-gradient(180deg, rgba(255,255,255,.04) 0%, rgba(255,255,255,.02) 100%);
+      border:1px solid rgba(255,255,255,.08);
+      box-shadow:0 8px 28px rgba(0,0,0,.20);
+      backdrop-filter:blur(10px);
+      transition:border-color .30s ease, transform .30s ease, box-shadow .30s ease, background .30s ease;
+    }
+
+    .elite-accordion-item:hover{
+      transform:translateY(-2px);
+      border-color:rgba(255,255,255,.13);
+      box-shadow:0 16px 40px rgba(0,0,0,.24);
+    }
+
+    .elite-accordion-item.active{
+      border-color:var(--accent-stroke);
+      background:linear-gradient(180deg, rgba(57,229,140,.07) 0%, rgba(255,255,255,.03) 100%);
+      box-shadow:0 18px 42px rgba(0,0,0,.24);
+    }
+
+    .elite-accordion-trigger{
+      width:100%;
+      border:0;
+      outline:0;
+      background:transparent;
+      color:var(--text);
+      cursor:pointer;
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:20px;
+      padding:28px 26px;
+      text-align:left;
+    }
+
+    .elite-accordion-label{
+      font-size:clamp(18px, 2vw, 24px);
+      font-weight:700;
+      letter-spacing:-.02em;
+    }
+
+    .elite-accordion-icon{
+      position:relative;
+      width:22px;
+      height:22px;
+      flex:0 0 22px;
+    }
+
+    .elite-accordion-icon::before,
+    .elite-accordion-icon::after{
+      content:"";
+      position:absolute;
+      top:50%;
+      left:50%;
+      background:rgba(247,249,251,.92);
+      border-radius:999px;
+      transform:translate(-50%, -50%);
+      transition:transform .35s ease, opacity .25s ease, background .25s ease;
+    }
+
+    .elite-accordion-item.active .elite-accordion-icon::before,
+    .elite-accordion-item.active .elite-accordion-icon::after{
+      background:var(--accent);
+    }
+
+    .elite-accordion-icon::before{width:16px;height:2px}
+    .elite-accordion-icon::after{width:2px;height:16px}
+
+    .elite-accordion-item.active .elite-accordion-icon::after{
+      opacity:0;
+      transform:translate(-50%, -50%) scaleY(.3);
+    }
+
+    .elite-accordion-content{
+      display:grid;
+      grid-template-rows:0fr;
+      transition:grid-template-rows .42s ease;
+    }
+
+    .elite-accordion-item.active .elite-accordion-content{
+      grid-template-rows:1fr;
+    }
+
+    .elite-accordion-content-inner{
+      overflow:hidden;
+      padding:0 26px;
+    }
+
+    .elite-accordion-content-inner p{
+      margin:0;
+      padding:0 0 26px;
+      max-width:760px;
+      color:rgba(247,249,251,.72);
+      font-size:16px;
+      line-height:1.85;
+      text-align:left;
+    }
+
+    .testimonials{
+      padding:74px 0 54px;
+      border-bottom:1px solid rgba(255,255,255,.05);
+      background:var(--section);
+      overflow:hidden;
+    }
+
+    .testimonials-head{
+      text-align:center;
+      margin-bottom:26px;
+    }
+
+    .testimonials-sub{
+      margin:14px auto 0;
+      max-width:760px;
+      font-size:16px;
+      line-height:1.68;
+      color:rgba(247,249,251,.62);
+    }
+
+    .testimonials-slider{
+      position:relative;
+      overflow:hidden;
+      mask-image:linear-gradient(to right, transparent, #000 10%, #000 90%, transparent);
+      -webkit-mask-image:linear-gradient(to right, transparent, #000 10%, #000 90%, transparent);
+    }
+
+    .testimonials-track{
+      display:flex;
+      gap:18px;
+      width:max-content;
+      animation:testimonials-marquee-right 34s linear infinite;
+      will-change:transform;
+    }
+
+    @keyframes testimonials-marquee-right{
+      from{transform:translateX(-50%)}
+      to{transform:translateX(0)}
+    }
+
+    .testimonial-card{
+      width:340px;
+      flex:0 0 340px;
+      padding:24px 22px;
+      border-radius:22px;
+      background:linear-gradient(180deg, rgba(255,255,255,.04), rgba(255,255,255,.02));
+      border:1px solid rgba(255,255,255,.08);
+      box-shadow:var(--shadow-sm);
+      position:relative;
+      overflow:hidden;
+    }
+
+    .testimonial-stars{
+      display:flex;
+      gap:4px;
+      margin-bottom:14px;
+      color:var(--accent);
+      font-size:14px;
+    }
+
+    .testimonial-text{
+      margin:0;
+      color:rgba(247,249,251,.84);
+      font-size:15px;
+      line-height:1.78;
+    }
+
+    .testimonial-author{
+      margin-top:18px;
+      display:flex;
+      flex-direction:column;
+      gap:3px;
+    }
+
+    .testimonial-name{
+      font-size:15px;
+      font-weight:800;
+    }
+
+    .testimonial-role{
+      font-size:13px;
+      color:rgba(247,249,251,.52);
+    }
+
+    .gallery-section{
+      padding:96px 0;
+      background:var(--section);
+      border-bottom:1px solid rgba(255,255,255,.05);
+    }
+
+    .gallery-head{
+      margin:0 auto 36px;
+      display:flex;
+      flex-direction:column;
+      align-items:center;
+      text-align:center;
+    }
+
+    .gallery-title{
+      color:#ffffff;
+      text-transform:uppercase;
+    }
+
+    .gallery-sub{
+      margin:14px 0 0;
+      color:rgba(255,255,255,.72);
+      font-size:1.05rem;
+      line-height:1.7;
+      max-width:640px;
+    }
+
+    .fade-slider{
+      position:relative;
+      height:560px;
+      overflow:hidden;
+      border-radius:28px;
+      background:#111111;
+      border:1px solid rgba(255,255,255,.08);
+      box-shadow:0 22px 56px rgba(0,0,0,.36);
+    }
+
+    .fade-slider::after{
+      content:"";
+      position:absolute;
+      inset:0;
+      pointer-events:none;
+      background:linear-gradient(180deg, rgba(0,0,0,.05) 0%, rgba(0,0,0,.20) 100%);
+    }
+
+    .fade-slider .slide{
+      position:absolute;
+      inset:0;
+      width:100%;
+      height:100%;
+      object-fit:cover;
+      opacity:0;
+      transition:opacity 1s ease-in-out, transform 6s ease;
+      transform:scale(1.02);
+    }
+
+    .fade-slider .slide.active{
+      opacity:1;
+      z-index:1;
+      transform:scale(1);
+    }
+
+    #inschrijven{
+      background:var(--section);
+    }
+
+    .form-shell{
+      max-width:860px;
+      margin:38px auto 0;
+      padding:30px;
+    }
+
+    .form-wrap{
+      max-width:820px;
+      margin-inline:auto;
+    }
+
+    .field{margin:18px 0 0}
+
+    label{
+      display:block;
+      font-size:13px;
+      color:rgba(247,249,251,.80);
+      margin:0 0 9px;
+      font-weight:800;
+      text-align:left;
+      letter-spacing:.01em;
+    }
+
+    input,select,textarea{
+      width:100%;
+      padding:15px 15px;
+      border-radius:14px;
+      border:1px solid rgba(255,255,255,.10);
+      background:rgba(255,255,255,.03);
+      color:var(--text);
+      outline:none;
+      font-size:15px;
+      transition:border-color .16s ease, box-shadow .16s ease, background .16s ease, transform .16s ease;
+    }
+
+    input:focus,select:focus,textarea:focus{
+      border-color:var(--accent-stroke);
+      box-shadow:0 0 0 4px rgba(57,229,140,.10);
+      background:rgba(255,255,255,.045);
+      transform:translateY(-1px);
+    }
+
+    textarea{min-height:120px;resize:vertical}
+    input::placeholder,textarea::placeholder{color:rgba(247,249,251,.35)}
+
+    .form-actions{margin-top:20px}
+
+    .form-actions .btn{
+      width:100%;
+      padding:17px 18px;
+      border-radius:14px;
+      font-size:16px;
+      min-width:0;
+    }
+
+    footer{
+      padding:74px 0 68px;
+      color:rgba(247,249,251,.55);
+      border-top:1px solid rgba(255,255,255,.05);
+      text-align:center;
+      font-size:13px;
+      background:var(--section);
+    }
+
+    .footer-inner{
+      display:flex;
+      flex-direction:column;
+      align-items:center;
+      gap:16px;
+    }
+
+    .footer-logo{
+      width:120px;
+      opacity:.95;
+      filter:drop-shadow(0 6px 14px rgba(0,0,0,.5));
+    }
+
+    .footer-social-title{
+      margin-top:6px;
+      font-weight:900;
+      letter-spacing:.08em;
+      text-transform:uppercase;
+      color:rgba(247,249,251,.85);
+      font-size:12px;
+    }
+
+    .social-icons{
+      display:flex;
+      gap:14px;
+      align-items:center;
+      justify-content:center;
+      margin-top:6px;
+    }
+
+    .social-icons a{
+      width:48px;
+      height:48px;
+      border-radius:999px;
+      border:1.5px solid var(--accent-stroke);
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
+      color:var(--accent);
+      transition:transform .14s ease, border-color .14s ease, background-color .14s ease, box-shadow .14s ease;
+      background:var(--accent-soft);
+      box-shadow:0 10px 24px rgba(0,0,0,.20);
+    }
+
+    .social-icons a:hover{
+      transform:translateY(-2px);
+      border-color:rgba(57,229,140,.48);
+      background:rgba(57,229,140,.16);
+      box-shadow:
+        0 12px 28px rgba(57,229,140,.10),
+        0 12px 28px rgba(0,0,0,.24);
+    }
+
+    .social-icons i{font-size:18px}
+
+    select{
+      background-color:#10161d;
+      color:var(--text);
+      border:1px solid rgba(255,255,255,.15);
+      appearance:none;
+      -webkit-appearance:none;
+      -moz-appearance:none;
+    }
+
+    select option{background-color:#10161d;color:var(--text)}
+    select option:checked{background-color:#151d26;color:var(--text)}
+
+    @media (max-width:1100px){
+      .club-logos{grid-template-columns:repeat(3, 1fr)}
+      .sem-premium-story-grid{grid-template-columns:1fr}
+      .sem-premium-image-card{
+        position:relative;
+        top:auto;
+        max-width:560px;
+        margin:0 auto;
+      }
+    }
+
+    @media (max-width:980px){
+      .section{padding:92px 0}
+
+      .pricing{
+        grid-template-columns:repeat(2, 1fr);
+        gap:18px;
+      }
+
+      .price-card:last-child{
+        grid-column:auto;
+        max-width:none;
+        margin:0;
+      }
+
+      .focus{
+        grid-template-columns:repeat(2, minmax(0, 1fr));
+        gap:18px;
+      }
+
+      .hero{
+        min-height:86vh;
+        padding:128px 0 76px;
+      }
+
+      .site-header-inner{
+        width:min(100%, calc(100% - 32px));
+        min-height:84px;
+      }
+
+      .header-logo img{height:80px}
+
+      .club-logos{
+        grid-template-columns:repeat(3, 1fr);
+        gap:18px;
+      }
+
+      .club-logo{
+        width:130px;
+        height:130px;
+      }
+
+      .club-logo img{
+        width:96px;
+        height:96px;
+      }
+
+      .hero-feature-grid{
+        grid-template-columns:repeat(2, minmax(0, 1fr));
+        max-width:780px;
+      }
+
+      .fade-slider{height:480px}
+      .audience-banner{min-height:560px}
+    }
+
+    @media (max-width:768px){
+      .section{padding:80px 0}
+      .section.tight{padding:58px 0}
+
+      .container{width:min(var(--max), calc(100% - 24px))}
+
+      .title-wrap{
+        max-width:92%;
+        margin:0 auto 28px;
+      }
+
+      .section-title{
+        font-size:clamp(30px, 8vw, 46px);
+        line-height:1.02;
+      }
+
+      .section-sub{
+        font-size:15px;
+        line-height:1.62;
+        margin-top:14px;
+        max-width:680px;
+      }
+
+      .hero{
+        min-height:78vh;
+        padding:120px 0 70px;
+      }
+
+      .hero-inner{max-width:100%}
+
+      .hero-title{
+        font-size:clamp(42px, 14vw, 84px);
+        line-height:.9;
+        max-width:420px;
+        margin-bottom:20px;
+      }
+
+      .hero-actions{gap:10px}
+
+      .btn,
+      .btn-light{
+        min-width:170px;
+        padding:14px 18px;
+        font-size:14px;
+      }
+
+      .hero-badge{
+        margin-top:16px;
+        padding:10px 16px;
+        font-size:10px;
+        letter-spacing:.14em;
+        gap:10px;
+      }
+
+      .hero-badge::before{
+        width:8px;
+        height:8px;
+      }
+
+      .audience-section{
+        padding:80px 0;
+      }
+
+      .audience-banner{
+        min-height:460px;
+        border-radius:24px;
+        padding:70px 18px;
+      }
+
+      .audience-badge{
+        font-size:10px;
+        letter-spacing:.14em;
+      }
+
+      .intro-text{
+        margin-top:18px;
+        font-size:18px;
+        line-height:1.65;
+      }
+
+      .audience-points{
+        grid-template-columns:repeat(2, minmax(0, 1fr));
+        gap:10px;
+        margin-top:24px;
+      }
+
+      .audience-points span{
+        min-height:48px;
+        font-size:12px;
+        padding:10px 12px;
+      }
+
+      .sem-premium-story-section{padding:82px 16px}
+      .sem-premium-story-heading{margin-bottom:30px}
+      .sem-premium-intro{font-size:14px;line-height:1.68}
+
+      .sem-premium-image-card,
+      .sem-premium-image{
+        border-radius:24px;
+        aspect-ratio:3 / 4.2;
+      }
+
+      .elite-accordion{gap:12px}
+      .elite-accordion-trigger{padding:20px 18px}
+      .elite-accordion-label{font-size:17px}
+      .elite-accordion-content-inner{padding:0 18px}
+      .elite-accordion-content-inner p{
+        padding-bottom:20px;
+        font-size:14px;
+        line-height:1.72;
+      }
+
+      .testimonial-card{
+        width:270px;
+        flex:0 0 270px;
+        padding:20px 18px;
+        border-radius:18px;
+      }
+
+      .testimonial-text{
+        font-size:14px;
+        line-height:1.65;
+      }
+
+      .hero-feature-grid{
+        grid-template-columns:repeat(2, minmax(0, 1fr));
+        max-width:100%;
+        gap:8px;
+      }
+
+      .hero-feature-box{
+        min-height:96px;
+        padding:12px 8px;
+        border-radius:15px;
+        gap:6px;
+      }
+
+      .hero-feature-icon{
+        width:32px;
+        height:32px;
+        border-radius:10px;
+      }
+
+      .hero-feature-kicker{
+        font-size:7px;
+        letter-spacing:.11em;
+      }
+
+      .hero-feature-text{font-size:10.5px;line-height:1.12}
+
+      .pricing{
+        grid-template-columns:1fr;
+        gap:14px;
+      }
+
+      .price-card,
+      .price-card:last-child,
+      .price-card.popular{
+        width:100%;
+        max-width:none;
+        margin:0;
+        grid-column:auto;
+        min-height:auto;
+        padding:22px 16px 18px;
+        border-radius:20px;
+        transform:none;
+      }
+
+      .plan-title{font-size:11px}
+
+      .price{
+        font-size:34px;
+        line-height:1.05;
+        margin:14px 0 8px;
+      }
+
+      .price-sub{
+        font-size:13px;
+        margin-bottom:18px;
+        min-height:auto;
+      }
+
+      .list{
+        gap:10px;
+        margin:14px 0 0;
+      }
+
+      .li{
+        font-size:13px;
+        gap:10px;
+      }
+
+      .price-card-cta{
+        padding-top:26px;
+      }
+
+      .price-card .btn{
+        width:100%;
+        min-width:0;
+      }
+
+      .focus{
+        grid-template-columns:1fr;
+        gap:16px;
+      }
+
+      .focus-card{
+        min-height:300px;
+        border-radius:24px;
+      }
+
+      .focus-card-content{
+        padding:20px 18px 18px;
+      }
+
+      .focus-card-title{
+        font-size:22px;
+        max-width:260px;
+      }
+
+      .focus-card-line{
+        width:58px;
+        margin-top:14px;
+      }
+
+      .xlist{
+        gap:10px;
+        font-size:15px;
+      }
+
+      .xrow{gap:10px}
+      .xmark{
+        width:20px;
+        height:20px;
+      }
+
+      .form-shell{
+        padding:20px 16px;
+        border-radius:22px;
+      }
+
+      .field{margin-top:14px}
+
+      input,select,textarea{
+        padding:14px 14px;
+        font-size:14px;
+        border-radius:12px;
+      }
+
+      .form-actions .btn{
+        padding:15px 16px;
+        font-size:15px;
+      }
+
+      .gallery-section{padding:78px 0}
+      .gallery-sub{
+        font-size:15px;
+        line-height:1.62;
+      }
+
+      .fade-slider{
+        height:360px;
+        border-radius:22px;
+      }
+    }
+
+    @media (max-width:640px){
+      .site-header-inner{
+        min-height:74px;
+        width:calc(100% - 18px);
+        gap:8px;
+      }
+
+      .header-left{
+        gap:8px;
+        min-width:0;
+        flex:1;
+      }
+
+      .header-logo img{height:56px}
+
+      .header-cta{
+        padding:9px 11px;
+        font-size:11px;
+        border-radius:10px;
+      }
+
+      .hero{
+        padding:108px 0 58px;
+        min-height:auto;
+      }
+
+      .hero-title{
+        font-size:clamp(34px, 13vw, 58px);
+        max-width:320px;
+      }
+
+      .club-strip{
+        padding:26px 14px 22px;
+      }
+
+      .club-logos{
+        grid-template-columns:repeat(3, 1fr);
+        gap:12px 8px;
+      }
+
+      .club-logo{
+        width:92px;
+        height:92px;
+        border-radius:16px;
+        padding:10px;
+      }
+
+      .club-logo img{
+        width:64px;
+        height:64px;
+      }
+
+      .club-name{
+        font-size:11px;
+        min-height:26px;
+      }
+
+      .testimonial-card{
+        width:248px;
+        flex:0 0 248px;
+        padding:18px 16px;
+      }
+
+      .testimonial-stars{font-size:12px}
+      .testimonial-name{font-size:14px}
+      .testimonial-role{font-size:12px}
+
+      .hero-feature-grid{
+        grid-template-columns:repeat(2, minmax(0, 1fr));
+        max-width:100%;
+        gap:6px;
+      }
+
+      .hero-feature-box{
+        min-height:82px;
+        padding:9px 5px;
+        border-radius:13px;
+        gap:5px;
+      }
+
+      .hero-feature-icon{
+        width:26px;
+        height:26px;
+        border-radius:9px;
+        font-size:12px;
+      }
+
+      .hero-feature-kicker{
+        font-size:6px;
+        letter-spacing:.1em;
+      }
+
+      .hero-feature-text{font-size:9px;line-height:1.05}
+
+      .pricing{
+        grid-template-columns:1fr;
+        gap:12px;
+      }
+
+      .price-card,
+      .price-card:last-child{
+        width:100%;
+        max-width:none;
+        margin:0;
+        grid-column:auto;
+      }
+
+      .price-card{padding:20px 16px 18px}
+      .price-card .btn{padding:14px 14px}
+
+      .form-shell{padding:16px 14px}
+      footer{padding:56px 0 52px}
+      .fade-slider{height:280px}
+      .audience-banner{min-height:400px}
+      .audience-points{grid-template-columns:1fr}
+    }
+
+    @media (max-width:420px){
+      .container{width:calc(100% - 18px)}
+      .header-logo img{height:52px}
+
+      .header-cta{
+        padding:8px 10px;
+        font-size:10px;
+      }
+
+      .title-wrap{
+        max-width:94%;
+      }
+
+      .section-title{
+        font-size:clamp(26px, 9vw, 34px);
+      }
+
+      .section-sub{font-size:14px}
+
+      .club-logo{
+        width:82px;
+        height:82px;
+      }
+
+      .club-logo img{
+        width:56px;
+        height:56px;
+      }
+
+      .hero-feature-grid{
+        grid-template-columns:repeat(2, minmax(0, 1fr));
+        gap:5px;
+      }
+
+      .hero-feature-box{
+        min-height:76px;
+        padding:8px 4px;
+      }
+
+      .hero-feature-icon{
+        width:24px;
+        height:24px;
+      }
+
+      .hero-feature-text{font-size:8.5px}
+
+      .btn,
+      .btn-light{
+        min-width:145px;
+        font-size:13px;
+        padding:13px 14px;
+      }
+
+      .hero-badge{
+        font-size:9px;
+        padding:9px 14px;
+      }
+
+      .sem-premium-story-section{padding:72px 12px}
+
+      .sem-premium-image-card,
+      .sem-premium-image{
+        aspect-ratio:3 / 4.2;
+      }
+
+      .focus-card{min-height:260px}
+
+      .focus-card-content{
+        padding:18px 16px 16px;
+      }
+
+      .focus-card-title{
+        font-size:20px;
+        max-width:220px;
+      }
+
+      .focus-card-line{
+        width:48px;
+        margin-top:12px;
+      }
+
+      .fade-slider{height:240px}
+
+      .audience-banner{
+        min-height:360px;
+        padding:60px 16px;
+      }
+
+      .audience-badge{
+        font-size:9px;
+        padding:9px 14px;
+      }
+
+      .intro-text{
+        font-size:16px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="site-header">
+    <div class="site-header-inner">
+      <div class="header-left">
+        <a href="#top" class="header-logo" aria-label="Sem Elite Performance home">
+          <img src="assets/sep logo png.png" alt="SEP logo" onerror="this.style.display='none'">
+        </a>
+      </div>
+
+      <button class="header-cta" data-scroll="#inschrijven">Claim je plek</button>
+    </div>
+  </div>
+
+  <header class="hero" id="top">
+    <video
+      class="hero-video"
+      autoplay
+      muted
+      loop
+      playsinline
+      webkit-playsinline
+      preload="auto"
+    >
+      <source src="assets/sem-banner-web.mp4" type="video/mp4">
+    </video>
+
+    <div class="container">
+      <div class="hero-inner">
+        <h1 class="hero-title">
+          Elite<br>
+          Off-Season<br>
+          Camp
+        </h1>
+
+        <div class="hero-actions">
+          <button class="btn" data-scroll="#inschrijven">Claim mijn plek</button>
+          <button class="btn-light" data-scroll="#pakketten">Bekijk pakketten</button>
+        </div>
+
+        <div class="hero-badge">Start editie 1 in Juni</div>
+      </div>
+    </div>
+  </header>
+
+  <section class="camp-info-section" aria-label="Camp informatie">
+    <div class="container">
+      <div class="hero-feature-grid">
+        <div class="hero-feature-box">
+          <div class="hero-feature-icon" aria-hidden="true">
+            <i class="fa-solid fa-calendar"></i>
+          </div>
+          <div class="hero-feature-kicker">Camp duur</div>
+          <div class="hero-feature-text">10 trainingsdagen</div>
+        </div>
+
+        <div class="hero-feature-box">
+          <div class="hero-feature-icon" aria-hidden="true">
+            <i class="fa-solid fa-bolt"></i>
+          </div>
+          <div class="hero-feature-kicker">Training</div>
+          <div class="hero-feature-text">Elite performance training</div>
+        </div>
+
+        <div class="hero-feature-box">
+          <div class="hero-feature-icon" aria-hidden="true">
+            <i class="fa-solid fa-user"></i>
+          </div>
+          <div class="hero-feature-kicker">Groep</div>
+          <div class="hero-feature-text">Maximaal 6 spelers</div>
+        </div>
+
+        <div class="hero-feature-box">
+          <div class="hero-feature-icon" aria-hidden="true">
+            <i class="fa-solid fa-location-dot"></i>
+          </div>
+          <div class="hero-feature-kicker">Locatie</div>
+          <div class="hero-feature-text">Made</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section tight" id="coach" aria-label="Clubs">
+    <div class="container">
+      <div class="panel club-strip">
+        <div class="section-head">
+          <div class="title-wrap">
+            <span class="eyebrow">Coacht spelers van</span>
+          </div>
+        </div>
+
+        <div class="club-logos">
+          <div class="club-item">
+            <div class="club-logo"><img src="assets/feyenoord.png" alt="Feyenoord logo"></div>
+            <div class="club-name">Feyenoord</div>
+          </div>
+
+          <div class="club-item">
+            <div class="club-logo"><img src="assets/psv eindhoven.png" alt="PSV logo"></div>
+            <div class="club-name">PSV</div>
+          </div>
+
+          <div class="club-item">
+            <div class="club-logo"><img src="assets/fc utrecht logo.png" alt="FC Utrecht logo"></div>
+            <div class="club-name">FC Utrecht</div>
+          </div>
+
+          <div class="club-item">
+            <div class="club-logo"><img class="logo-vitesse" src="assets/vitesse logo.png" alt="Vitesse logo"></div>
+            <div class="club-name">Vitesse</div>
+          </div>
+
+          <div class="club-item">
+            <div class="club-logo"><img src="assets/nac breda logo.png" alt="NAC Breda logo"></div>
+            <div class="club-name">NAC Breda</div>
+          </div>
+
+          <div class="club-item">
+            <div class="club-logo"><img class="logo-denbosch" src="assets/fe den bosch.png" alt="FC Den Bosch logo"></div>
+            <div class="club-name">FC Den Bosch</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="audience-section" id="voorwie">
+    <div class="container">
+      <div class="audience-banner">
+        <div class="audience-content">
+          <div class="title-wrap">
+            <div class="audience-badge">Voor ambitieuze spelers</div>
+            <h2 class="section-title audience-title">Dit kamp is voor spelers die:</h2>
+            <p class="intro-text"></p>
+          </div>
+
+          <div class="audience-points">
+            <span>Spelen vanaf BVO O17 t/m 1e elftal &amp; topamateur</span>
+            <span>100% prestatiegericht zijn</span>
+            <span>Fysiek een voorsprong willen opbouwen</span>
+            <span>Méér willen dan gemiddeld trainen</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="statement" id="waarom">
+    <div class="container center">
+      <div class="section-head">
+        <div class="title-wrap">
+          <div class="eyebrow">Waarom nu?</div>
+          <h2 class="section-title">De meeste spelers worden in de zomer zwakker.</h2>
+        </div>
+      </div>
+
+      <div class="xlist" role="list">
+        <div class="xrow" role="listitem">
+          <span class="xmark" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3">
+              <path d="M6 6l12 12M18 6 6 18"/>
+            </svg>
+          </span>
+          <span>Ze verliezen snelheid.</span>
+        </div>
+
+        <div class="xrow" role="listitem">
+          <span class="xmark" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3">
+              <path d="M6 6l12 12M18 6 6 18"/>
+            </svg>
+          </span>
+          <span>Ze verliezen kracht.</span>
+        </div>
+
+        <div class="xrow" role="listitem">
+          <span class="xmark" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3">
+              <path d="M6 6l12 12M18 6 6 18"/>
+            </svg>
+          </span>
+          <span>Ze verliezen hun voorsprong.</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="focus">
+    <div class="container center">
+      <div class="section-head">
+        <div class="title-wrap">
+          <div class="eyebrow">Wat je ontwikkelt</div>
+          <h2 class="section-title">Het Elite Off-Season Camp</h2>
+          <p class="section-sub">
+            In dit 10-daagse kamp bouw je gericht aan de fysieke kwaliteiten die direct verschil maken op het veld.
+          </p>
+        </div>
+      </div>
+
+      <div class="focus">
+        <div class="focus-card">
+          <img src="assets/seth sprint.jpeg" alt="Sprint snelheid">
+          <div class="focus-card-content">
+            <h3 class="focus-card-title">Sprint snelheid</h3>
+            <div class="focus-card-line"></div>
+          </div>
+        </div>
+
+        <div class="focus-card">
+          <img src="assets/redwan binnen rotatie cable.jpeg" alt="Explosieve kracht training">
+          <div class="focus-card-content">
+            <h3 class="focus-card-title">Explosieve kracht</h3>
+            <div class="focus-card-line"></div>
+          </div>
+        </div>
+
+        <div class="focus-card">
+          <img src="assets/hamstring strech.jpeg" alt="Mobiliteit">
+          <div class="focus-card-content">
+            <h3 class="focus-card-title">Mobiliteit</h3>
+            <div class="focus-card-line"></div>
+          </div>
+        </div>
+
+        <div class="focus-card">
+          <img src="assets/hylke horde binnen.jpeg" alt="Functioneel bewegen">
+          <div class="focus-card-content">
+            <h3 class="focus-card-title">Functioneel bewegen</h3>
+            <div class="focus-card-line"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section tight" id="pakketten">
+    <div class="container center">
+      <div class="section-head">
+        <div class="title-wrap">
+          <div class="eyebrow">Pakketten</div>
+          <h2 class="section-title">Kies het niveau dat bij jou past.</h2>
+          <p class="section-sub">
+            Drie trajecten, afgestemd op persoonlijke doelen, begeleiding en coaching.
+          </p>
+        </div>
+      </div>
+
+      <div class="pricing">
+        <div class="price-card">
+          <div class="price-card-body">
+            <div class="plan-title">Foundation Camp</div>
+            <div class="price">€395</div>
+            <p class="price-sub">Voor spelers die hun basis willen behouden.</p>
+
+            <ul class="list">
+              <li class="li">
+                <span class="check" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3">
+                    <path d="M20 6 9 17l-5-5"/>
+                  </svg>
+                </span>
+                <span>Trainingskamp bestaande uit 10 dagen</span>
+              </li>
+              <li class="li">
+                <span class="check" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3">
+                    <path d="M20 6 9 17l-5-5"/>
+                  </svg>
+                </span>
+                <span>Trainingsduur van 90-120 minuten</span>
+              </li>
+              <li class="li">
+                <span class="check" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3">
+                    <path d="M20 6 9 17l-5-5"/>
+                  </svg>
+                </span>
+                <span>Action Types Profilering</span>
+              </li>
+            </ul>
+
+            <div class="price-card-cta">
+              <button class="btn" data-select="Foundation" data-scroll="#inschrijven">Claim je plek</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="price-card popular">
+          <div class="price-card-body">
+            <div class="badge-wrapper"><div class="badge">Aanbevolen</div></div>
+            <div class="plan-title">Performance Camp</div>
+            <div class="price">€450</div>
+            <p class="price-sub">Voor spelers die fysiek het verschil willen maken.</p>
+
+            <ul class="list">
+              <li class="li">
+                <span class="check" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3">
+                    <path d="M20 6 9 17l-5-5"/>
+                  </svg>
+                </span>
+                <span>Het volledige Foundation pakket</span>
+              </li>
+              <li class="li">
+                <span class="check" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3">
+                    <path d="M20 6 9 17l-5-5"/>
+                  </svg>
+                </span>
+                <span>Persoonlijk programma voor prep &amp; cooling down</span>
+              </li>
+            </ul>
+
+            <div class="price-card-cta">
+              <button class="btn" data-select="Performance" data-scroll="#inschrijven">Reserveer mijn plek</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="price-card">
+          <div class="price-card-body">
+            <div class="plan-title">Elite Camp</div>
+            <div class="price">€695</div>
+            <p class="price-sub">Voor spelers die all-in gaan.</p>
+
+            <ul class="list">
+              <li class="li">
+                <span class="check" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3">
+                    <path d="M20 6 9 17l-5-5"/>
+                  </svg>
+                </span>
+                <span>Het volledige Performance pakket</span>
+              </li>
+              <li class="li">
+                <span class="check" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3">
+                    <path d="M20 6 9 17l-5-5"/>
+                  </svg>
+                </span>
+                <span>Testdag</span>
+              </li>
+              <li class="li">
+                <span class="check" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3">
+                    <path d="M20 6 9 17l-5-5"/>
+                  </svg>
+                </span>
+                <span>Exit testdag</span>
+              </li>
+              <li class="li">
+                <span class="check" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3">
+                    <path d="M20 6 9 17l-5-5"/>
+                  </svg>
+                </span>
+                <span>Persoonlijk zomerschema – conditie</span>
+              </li>
+              <li class="li">
+                <span class="check" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3">
+                    <path d="M20 6 9 17l-5-5"/>
+                  </svg>
+                </span>
+                <span>Persoonlijk zomerschema – kracht</span>
+              </li>
+              <li class="li">
+                <span class="check" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3">
+                    <path d="M20 6 9 17l-5-5"/>
+                  </svg>
+                </span>
+                <span>Persoonlijk zomerschema – body movements</span>
+              </li>
+            </ul>
+
+            <div class="price-card-cta">
+              <button class="btn" data-select="All-in" data-scroll="#inschrijven">Ik ga all-in</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="sem-premium-story-section">
+    <div class="sem-premium-story-wrap">
+      <div class="sem-premium-story-heading">
+        <div class="title-wrap">
+          <div class="eyebrow">Coach story</div>
+          <h2 class="section-title">De visie achter Sem Elite Performance</h2>
+          <p class="sem-premium-intro">
+            Meer dan alleen trainen. Ontdek de achtergrond, visie en standaarden achter de manier waarop Sem ambitieuze voetballers ontwikkelt.
+          </p>
+        </div>
+      </div>
+
+      <div class="sem-premium-story-grid">
+        <div class="sem-premium-visual">
+          <div class="sem-premium-image-card">
+            <img src="assets/sem karim long lever bridge core.jpeg" alt="Sem van der Pijl tijdens training" class="sem-premium-image" />
+          </div>
+        </div>
+
+        <div class="sem-premium-content">
+          <div class="elite-accordion">
+            <div class="elite-accordion-item active">
+              <button class="elite-accordion-trigger" aria-expanded="true" type="button">
+                <span class="elite-accordion-label">Performance coach bij NAC</span>
+                <span class="elite-accordion-icon" aria-hidden="true"></span>
+              </button>
+              <div class="elite-accordion-content">
+                <div class="elite-accordion-content-inner">
+                  <p>
+                    Ik werk inmiddels vier jaar als performance coach bij NAC Breda en begeleid daar dagelijks spelers in hun fysieke en conditionele ontwikkeling. De ervaring binnen de professionele voetbalomgeving zorgt ervoor dat mijn aanpak niet gebaseerd is op trends, maar op standaarden, wetenschap en visie die daadwerkelijk relevant is voor jeugd- en profvoetballers.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <div class="elite-accordion-item">
+              <button class="elite-accordion-trigger" aria-expanded="false" type="button">
+                <span class="elite-accordion-label">Voetbalachtergrond</span>
+                <span class="elite-accordion-icon" aria-hidden="true"></span>
+              </button>
+              <div class="elite-accordion-content">
+                <div class="elite-accordion-content-inner">
+                  <p>
+                    Met een voetbalachtergrond van acht jaar in de jeugdopleiding van Feyenoord – van O12 tot Jong Feyenoord – en mijn officieuze debuut in het eerste elftal op zeventienjarige leeftijd, begrijp ik wat er nodig is om op topniveau te blijven presteren. Niet alleen fysiek en conditioneel, maar ook op het gebied van discipline, belasting, focus, tegenslagen en de druk die daar dagelijks bij komt kijken.
+                  </p>
+                  <p>
+                    Ik weet wat spelers meemaken, zowel in euforische momenten als in moeilijke periodes. Daardoor kan ik spelers niet alleen fysiek begeleiden, maar ook begrijpen en ondersteunen in wat zij doormaken.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <div class="elite-accordion-item">
+              <button class="elite-accordion-trigger" aria-expanded="false" type="button">
+                <span class="elite-accordion-label">Trainingsfilosofie</span>
+                <span class="elite-accordion-icon" aria-hidden="true"></span>
+              </button>
+              <div class="elite-accordion-content">
+                <div class="elite-accordion-content-inner">
+                  <p>
+                    Mijn filosofie is dat de wervelkolom centraal staat in de beweeglijkheid en belastbaarheid van het menselijk lichaam. De juiste balans tussen mobiliteit en robuustheid vormt daarbij de basis voor duurzame en elite sportprestaties.
+                  </p>
+                  <p>
+                    Vanuit die basis ontstaan eliteprestaties door kwaliteit, structuur en herhaling. Elke training is ontworpen om spelers sneller, krachtiger en explosiever te maken, met maximale transfer naar het veld.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <div class="elite-accordion-item">
+              <button class="elite-accordion-trigger" aria-expanded="false" type="button">
+                <span class="elite-accordion-label">Waarom spelers voor Sem kiezen</span>
+                <span class="elite-accordion-icon" aria-hidden="true"></span>
+              </button>
+              <div class="elite-accordion-content">
+                <div class="elite-accordion-content-inner">
+                  <p>
+                    Spelers kiezen voor mij omdat mijn aanpak zowel professioneel als persoonlijk is. Geen massagroepen, maar volledige aandacht voor detail, uitvoering en progressie, gecombineerd met persoonlijke fysieke en mentale begeleiding.
+                  </p>
+                  <p>
+                    Mijn trajecten zijn bedoeld voor ambitieuze voetballers die niet zomaar willen trainen, maar doelgericht willen bouwen aan hun fysieke voorsprong en hun prestaties op het veld naar een hoger niveau willen brengen.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="testimonials" aria-label="Testimonials">
+    <div class="container">
+      <div class="testimonials-head">
+        <div class="title-wrap">
+          <p class="eyebrow">Testimonials</p>
+          <h2 class="section-title">Wat spelers over Sem zeggen</h2>
+          <p class="testimonials-sub">
+            Ervaringen van ambitieuze spelers die bewust investeren in snelheid, kracht en explosiviteit.
+          </p>
+        </div>
+      </div>
+
+      <div class="testimonials-slider">
+        <div class="testimonials-track">
+          <article class="testimonial-card">
+            <div class="testimonial-stars">
+              <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+            </div>
+            <p class="testimonial-text">“Door Sem ben ik merkbaar sneller geworden in mijn eerste meters. Dat verschil voel je direct in wedstrijden.”</p>
+            <div class="testimonial-author">
+              <span class="testimonial-name">Speler O19</span>
+              <span class="testimonial-role">BVO jeugd</span>
+            </div>
+          </article>
+
+          <article class="testimonial-card">
+            <div class="testimonial-stars">
+              <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+            </div>
+            <p class="testimonial-text">“De trainingen zijn zwaar, maar alles heeft een doel. Ik ben explosiever geworden en voel me veel sterker op het veld.”</p>
+            <div class="testimonial-author">
+              <span class="testimonial-name">Speler 1e elftal</span>
+              <span class="testimonial-role">Top amateur</span>
+            </div>
+          </article>
+
+          <article class="testimonial-card">
+            <div class="testimonial-stars">
+              <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+            </div>
+            <p class="testimonial-text">“Sem kijkt niet alleen naar hard trainen, maar juist naar details, uitvoering en wat je als speler echt nodig hebt.”</p>
+            <div class="testimonial-author">
+              <span class="testimonial-name">Speler O17</span>
+              <span class="testimonial-role">Jeugdopleiding</span>
+            </div>
+          </article>
+
+          <article class="testimonial-card">
+            <div class="testimonial-stars">
+              <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+            </div>
+            <p class="testimonial-text">“Wat ik vooral sterk vind is dat Sem je begrijpt als speler. Je voelt dat hij zelf uit die wereld komt.”</p>
+            <div class="testimonial-author">
+              <span class="testimonial-name">Speler</span>
+              <span class="testimonial-role">Selectiespeler</span>
+            </div>
+          </article>
+
+          <article class="testimonial-card" aria-hidden="true">
+            <div class="testimonial-stars">
+              <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+            </div>
+            <p class="testimonial-text">“Door Sem ben ik merkbaar sneller geworden in mijn eerste meters. Dat verschil voel je direct in wedstrijden.”</p>
+            <div class="testimonial-author">
+              <span class="testimonial-name">Speler O19</span>
+              <span class="testimonial-role">BVO jeugd</span>
+            </div>
+          </article>
+
+          <article class="testimonial-card" aria-hidden="true">
+            <div class="testimonial-stars">
+              <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+            </div>
+            <p class="testimonial-text">“De trainingen zijn zwaar, maar alles heeft een doel. Ik ben explosiever geworden en voel me veel sterker op het veld.”</p>
+            <div class="testimonial-author">
+              <span class="testimonial-name">Speler 1e elftal</span>
+              <span class="testimonial-role">Top amateur</span>
+            </div>
+          </article>
+
+          <article class="testimonial-card" aria-hidden="true">
+            <div class="testimonial-stars">
+              <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+            </div>
+            <p class="testimonial-text">“Sem kijkt niet alleen naar hard trainen, maar juist naar details, uitvoering en wat je als speler echt nodig hebt.”</p>
+            <div class="testimonial-author">
+              <span class="testimonial-name">Speler O17</span>
+              <span class="testimonial-role">Jeugdopleiding</span>
+            </div>
+          </article>
+
+          <article class="testimonial-card" aria-hidden="true">
+            <div class="testimonial-stars">
+              <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+            </div>
+            <p class="testimonial-text">“Ik kwam na de zomer fitter terug dan ooit. Dat gaf me meteen een voorsprong in de voorbereiding.”</p>
+            <div class="testimonial-author">
+              <span class="testimonial-name">Speler O21</span>
+              <span class="testimonial-role">Prestatiegericht traject</span>
+            </div>
+          </article>
+
+          <article class="testimonial-card" aria-hidden="true">
+            <div class="testimonial-stars">
+              <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+            </div>
+            <p class="testimonial-text">“Wat ik vooral sterk vind is dat Sem je begrijpt als speler. Je voelt dat hij zelf uit die wereld komt.”</p>
+            <div class="testimonial-author">
+              <span class="testimonial-name">Speler</span>
+              <span class="testimonial-role">Selectiespeler</span>
+            </div>
+          </article>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="gallery-section" id="foto-slider">
+    <div class="container">
+      <div class="gallery-head">
+        <div class="title-wrap">
+          <div class="eyebrow">Resultaten</div>
+          <h2 class="section-title gallery-title">Sfeer &amp; Progressie</h2>
+          <p class="gallery-sub">
+            Een blik in de Sem Elite Performance omgeving, waar kwaliteit, energie en ontwikkeling samenkomen.
+          </p>
+        </div>
+      </div>
+
+      <div class="fade-slider" aria-label="Fotogalerij">
+        <img src="assets/Groepsfoto.jpeg" alt="Groepsfoto Sem Elite Performance" class="slide active">
+        <img src="assets/groep buiten.jpeg" alt="Training en performance moment" class="slide">
+        <img src="assets/hylke horde binnen.jpeg" alt="Speler uit de SEP omgeving" class="slide">
+        <img src="assets/redwan binnen rotatie aquabag.jpeg" alt="Performance en progressie" class="slide">
+        <img src="assets/redwan dribbel.jpeg" alt="Performance en progressie" class="slide">
+        <img src="assets/seth horde.jpeg" alt="Performance en progressie" class="slide">
+        <img src="assets/sem en gijs.jpeg" alt="Performance en progressie" class="slide">
+        <img src="assets/binnen zijwaarts.jpeg" alt="Performance en progressie" class="slide">
+        <img src="assets/over horde plyo.jpeg" alt="Performance en progressie" class="slide">
+      </div>
+    </div>
+  </section>
+
+  <section class="section tight" id="inschrijven">
+    <div class="container center">
+      <div class="section-head">
+        <div class="title-wrap">
+          <div class="eyebrow">Reserveer jouw plek</div>
+          <h2 class="section-title">Schrijf je in voor het camp</h2>
+          <p class="section-sub">
+            Wil jij deze zomer sneller en explosiever worden? Reserveer nu jouw plek voor het Elite Off-Season Speed Camp.
+          </p>
+        </div>
+      </div>
+
+      <div class="panel form-shell">
+        <div class="form-wrap">
+          <form id="leadForm" action="https://formspree.io/f/xkovlnrv" method="POST">
+            <input type="hidden" name="_subject" value="Nieuwe inschrijving — Sem Elite Performance (Off-season Camp)">
+            <input type="hidden" name="_replyto" value="">
+            <input type="text" name="_gotcha" style="display:none">
+
+            <div class="field">
+              <label for="naam">Naam *</label>
+              <input id="naam" name="naam" type="text" required>
+            </div>
+
+            <div class="field">
+              <label for="leeftijd">Leeftijd *</label>
+              <input id="leeftijd" name="leeftijd" type="number" required>
+            </div>
+
+            <div class="field">
+              <label for="club">Club *</label>
+              <input id="club" name="club" type="text" required>
+            </div>
+
+            <div class="field">
+              <label for="telefoon">Telefoon *</label>
+              <input id="telefoon" name="telefoon" type="tel" required>
+            </div>
+
+            <div class="field">
+              <label for="email">E-mail *</label>
+              <input id="email" name="email" type="email" required>
+            </div>
+
+            <div class="field">
+              <label for="pakket">Gekozen pakket *</label>
+              <select id="pakket" name="pakket" required>
+                <option value="" selected disabled>Selecteer een pakket</option>
+                <option>Foundation (€395)</option>
+                <option>Performance (€450)</option>
+                <option>All-in (€695)</option>
+              </select>
+            </div>
+
+            <div class="form-actions">
+              <button class="btn" type="submit">Definitief inschrijven</button>
+            </div>
+
+            <div id="formMsg" class="muted2" style="margin-top:12px; font-size:13px;"></div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="container">
+      <div class="footer-inner">
+        <img src="assets/sep logo png.png" alt="SEP logo" class="footer-logo" onerror="this.style.display='none'">
+        <div class="footer-social-title">Volg ons op social media</div>
+
+        <div class="social-icons">
+          <a href="https://www.instagram.com/semeliteperformance/" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+            <i class="fa-brands fa-instagram"></i>
+          </a>
+        </div>
+
+        <div>
+          © <span id="year"></span> Sem Elite Performance. Alle rechten voorbehouden.
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      document.querySelectorAll("[data-scroll]").forEach((btn) => {
+        btn.addEventListener("click", () => {
+          const target = btn.getAttribute("data-scroll");
+          const el = document.querySelector(target);
+          if (!el) return;
+          el.scrollIntoView({ behavior: "smooth", block: "start" });
+        });
+      });
+
+      document.querySelectorAll("[data-select]").forEach((btn) => {
+        btn.addEventListener("click", () => {
+          const choice = btn.getAttribute("data-select");
+          const select = document.getElementById("pakket");
+          if (!select) return;
+
+          const map = {
+            Foundation: "Foundation (€395)",
+            Performance: "Performance (€450)",
+            "All-in": "All-in (€695)"
+          };
+
+          const value = map[choice] || "";
+          [...select.options].forEach((opt) => {
+            if (opt.textContent.trim() === value) {
+              select.value = opt.textContent.trim();
+            }
+          });
+        });
+      });
+
+      const leadForm = document.getElementById("leadForm");
+      if (leadForm) {
+        leadForm.addEventListener("submit", async (e) => {
+          e.preventDefault();
+
+          const form = e.currentTarget;
+          const msg = document.getElementById("formMsg");
+          const btn = form.querySelector('button[type="submit"]');
+
+          const emailVal = document.getElementById("email")?.value?.trim() || "";
+          const replyTo = form.querySelector('input[name="_replyto"]');
+          if (replyTo) replyTo.value = emailVal;
+
+          msg.textContent = "Verzenden...";
+          btn.disabled = true;
+
+          try {
+            const formData = new FormData(form);
+
+            const res = await fetch(form.action, {
+              method: "POST",
+              body: formData,
+              headers: { Accept: "application/json" }
+            });
+
+            if (res.ok) {
+              msg.textContent = "Gelukt! Je inschrijving is verzonden. Ik neem snel contact met je op.";
+              form.reset();
+              const pakket = document.getElementById("pakket");
+              if (pakket) pakket.selectedIndex = 0;
+            } else {
+              msg.textContent = "Verzenden lukt nu even niet. Probeer later opnieuw of stuur direct een bericht.";
+            }
+          } catch (err) {
+            msg.textContent = "Netwerkfout. Check je verbinding en probeer opnieuw.";
+          } finally {
+            btn.disabled = false;
+          }
+        });
+      }
+
+      const accordionItems = document.querySelectorAll(".elite-accordion-item");
+
+      accordionItems.forEach((item) => {
+        const trigger = item.querySelector(".elite-accordion-trigger");
+
+        trigger.addEventListener("click", () => {
+          const isActive = item.classList.contains("active");
+
+          accordionItems.forEach((accordionItem) => {
+            accordionItem.classList.remove("active");
+            accordionItem.querySelector(".elite-accordion-trigger").setAttribute("aria-expanded", "false");
+          });
+
+          if (!isActive) {
+            item.classList.add("active");
+            trigger.setAttribute("aria-expanded", "true");
+          }
+        });
+      });
+
+      const video = document.querySelector(".hero-video");
+      if (video) {
+        video.muted = true;
+        video.play().catch(() => {
+          document.addEventListener("touchstart", () => {
+            video.play();
+          }, { once: true });
+        });
+      }
+
+      const slides = document.querySelectorAll(".fade-slider .slide");
+      if (slides.length > 1) {
+        let current = 0;
+
+        setInterval(() => {
+          slides[current].classList.remove("active");
+          current = (current + 1) % slides.length;
+          slides[current].classList.add("active");
+        }, 4000);
+      }
+
+      const yearEl = document.getElementById("year");
+      if (yearEl) {
+        yearEl.textContent = new Date().getFullYear();
+      }
+    });
+  </script>
+</body>
+</html>
